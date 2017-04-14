@@ -1,0 +1,63 @@
+<!--
+  Generated template for the InsertCanvas page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Insert Canvas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  
+  <div class="login-box">
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-input type="text" placeholder="phone" name="phone" [(ngModel)]="registerCredentials.phone" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" placeholder="category" name="category" [(ngModel)]="registerCredentials.category" required></ion-input>
+            </ion-item>
+			<ion-item>
+              <ion-input type="text" placeholder="ContactName" name="ContactName" [(ngModel)]="registerCredentials.ContactName" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" placeholder="email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" placeholder="notes" name="notes" [(ngModel)]="registerCredentials.notes" required></ion-input>
+            </ion-item>
+            <!--<ion-item>
+              <ion-input type="text" placeholder="product" name="product" [(ngModel)]="registerCredentials.product" required></ion-input>
+            </ion-item>-->
+            <ion-item>
+              <ion-input type="text" placeholder="status" name="status" [(ngModel)]="registerCredentials.status" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" placeholder="username" name="username" [(ngModel)]="registerCredentials.username" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Submit</button>
+          <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+</ion-content>
+
